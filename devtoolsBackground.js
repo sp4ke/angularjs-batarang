@@ -6,8 +6,11 @@ var getPanelContents = function () {
   if (window.angular && $0) {
     //TODO: can we move this scope export into updateElementProperties
     var scope = window.angular.element($0).scope();
+    var injector = window.angular.element($0).injector();
     // Export $scope to the console
     window.$scope = scope;
+    // Export $injector to the console
+    window.$injector = injector;
     return (function (scope) {
       var panelContents = {
         __private__: {}
